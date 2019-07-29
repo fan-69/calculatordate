@@ -304,16 +304,18 @@
     $(document).on('click','.set_memory',function(event){
         $('#'+$(this).attr('for')).prop('value',$(this).text());
         $(this).closest('[data-role="popup"]').popup('close');
-    });
-    
-    if ('serviceWorker' in navigator) {
-  	window.addEventListener('load', () => {
-    	navigator.serviceWorker.register('/sw.js')
-        .then((reg) => {
-          console.log('Service worker registered.', reg);
-        });
-  	});
-    }	
+    });	
 </script>	
 </body>
 </html>
+<script>
+    if (navigator.serviceWorker.controller) {
+  		console.log('[PWA Builder] active service worker found, no need to register')
+	} else {
+  		navigator.serviceWorker.register('sw.js', {
+    		scope: './'
+  	}).then(function(reg) {
+    	console.log('Service worker has been registered for scope:'+ reg.scope);
+  });
+}
+</script>

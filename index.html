@@ -305,18 +305,6 @@
         $('#'+$(this).attr('for')).prop('value',$(this).text());
         $(this).closest('[data-role="popup"]').popup('close');
     });
-    
-    // событие нажатия на поле ввода данных числом
-    //$('[type="number"][readonly="true"]').on('click',function(event){
-    //    var dat='';
-    //    for(i=Number($(this).attr('min'));i<=Number($(this).attr('max'));i++){
-    //        dat=dat+'<li for="'+event.target.id+'" class="set_number centr">'+i+'</li>';
-    //    }
-    //    $('.of_number[data-role="popup"] ul').html(dat);
-        $('.of_number[data-role="popup"]').popup('open');
-        $('.of_number[data-role="popup"]').css({'overflow':'scroll','height':'121px'});
-        $('.of_number[data-role="popup"] ul li').css({'height':'30px'})
-    });
 </script>	
 </body>
 </html>

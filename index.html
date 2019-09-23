@@ -39,6 +39,16 @@
 </head>
 
 <body>
+<!--Стартовая страница-->	
+<div data-role="page" id="start_page">
+	<div data-role="header" data-position="fixed">
+		<h6>Калькулятор дат</h6>
+	</div>
+	<img src="sud.png" width="90%" style="margin-left: 5%; margin-top: 20%">
+	<div class="ui-footer-fixed" data-role="footer">
+	  <h6>Программа создана @Frolov Aleksey</h6>
+  </div>
+</div>	
 <!--Базовая страница-->    
 <div data-role="page" id="basic_calculation">
   <!--Панель базовой страницы-->
@@ -304,7 +314,14 @@
     $(document).on('click','.set_memory',function(event){
         $('#'+$(this).attr('for')).prop('value',$(this).text());
         $(this).closest('[data-role="popup"]').popup('close');
-    });	
+    });
+	
+	// событие перехода на стартовую страницу
+	$('#start_page').on('pageshow',function(event){
+		setTimeout(function(){
+			document.location.href='#basic_calculation';
+		},1000);
+	});
 </script>	
 </body>
 </html>

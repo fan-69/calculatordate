@@ -52,7 +52,7 @@
 <!--Базовая страница-->    
 <div data-role="page" id="basic_calculation">
   <!--Панель базовой страницы-->
-  <div data-role="panel" data-position-fixed="true">
+  <div data-role="panel" data-position-fixed="true" id="menu_basic">
     <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
         <li>МЕНЮ</li>
         <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#date_difference">Разность дат</a></li>
@@ -62,6 +62,7 @@
   </div>
   
   <div data-role="header" data-position="fixed">
+	<a href="#menu_basic" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть меню</a>
     <h6>Основной рассчет</h6>
   </div>
   
@@ -103,7 +104,7 @@
 <!--Страница рассчета разности дат-->
 <div data-role="page" id="date_difference">
     
-    <div data-role="panel" data-position-fixed="true">
+    <div data-role="panel" data-position-fixed="true" id="menu_difference">
         <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
             <li>МЕНЮ</li>
             <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#basic_calculation">Основной рассчет</a></li>
@@ -113,6 +114,7 @@
     </div>
     
   <div data-role="header">
+	<a href="#menu_difference" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть меню</a>
     <h6>Разность дат</h6>
   </div>
   <div data-role="content">
@@ -142,7 +144,7 @@
 <!--Страница добавить к дате-->
 <div data-role="page" id="add_to_date">
     
-    <div data-role="panel" data-position-fixed="true">
+    <div data-role="panel" data-position-fixed="true" id="menu_add_to_date">
         <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
             <li>МЕНЮ</li>
             <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#basic_calculation">Основной рассчет</a></li>
@@ -152,6 +154,7 @@
     </div>
     
     <div data-role="header">
+		<a href="#menu_add_to_date" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть меню</a>
         <h6>Добавить к дате</h6>
     </div>
     <div data-role="content">
@@ -188,7 +191,7 @@
 <!--Страница информации-->
 <div data-role="page" id="info">
     
-    <div data-role="panel" data-position-fixed="true">
+    <div data-role="panel" data-position-fixed="true" id="menu_info">
         <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
             <li>МЕНЮ</li>
             <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#basic_calculation">Основной рассчет</a></li>
@@ -198,10 +201,12 @@
     </div>
     
     <div data-role="header" class="ui-footer-fixed">
+		<a href="#menu_info" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть меню</a>
         <h6>Информация</h6>
     </div>
     <div data-role="content" class="scroll">
         <h4>Информация о приложении</h4>
+		<h4>V: 1.2.1</h4>
         <p>Данное приложение создано по заказу судьи "Кузьминского суда" (секрет какого).</p>
         <p>Приложение предназначено для выполнения рассчетов с датами.</p>
         <h3>Функционал</h3>
@@ -244,7 +249,7 @@
 <script>
 	$('a').buttonMarkup({ inline: true }); // кнопка размером с текст кнопки
 	
-	// функционал открытия боковой панели
+	// функционал открытия боковой панели жестом
 	$("div[data-role='page']").on("swiperight",function(event,ui){
 	    $('#'+event.currentTarget.id+' [data-role="panel"]').panel('open');
     });

@@ -1,389 +1,464 @@
 <!doctype html>
 <html>
+
 <head>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(57483529, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true
-   });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/57483529" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->	
-<meta charset="utf-8">
-<title>Калькулятор дат</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="apple-mobile-web-app-title" content="Калькулятор дат">
-<link href="js/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
-<link href="js/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/jquery.mobile-1.3.0.min.js"></script>
+        ym(57483529, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/57483529" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <meta charset="utf-8">
+    <title>Калькулятор дат</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Калькулятор дат">
+    <link href="js/jquery.mobile.theme-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <link href="js/jquery.mobile.structure-1.3.0.min.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.mobile-1.3.0.min.js"></script>
 
-<!--<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">-->
-<link rel="shortcut icon" href="icons/favicon-96x96.png" type="image/png">
-<link href="may.css" rel="stylesheet" type="text/css">
-<script src="app.js"></script>
+    <!--<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">-->
+    <link rel="shortcut icon" href="icons/favicon-96x96.png" type="image/png">
+    <link href="may.css" rel="stylesheet" type="text/css">
+    <script src="app.js"></script>
 
-<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-<link rel="manifest" href="manifest.json">
-<meta name="msapplication-TileColor" content="#F7F7F7">
-<meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-<meta name="theme-color" content="#F7F7F7">
-<meta name="description" content="Калькулятор дат">
-
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="msapplication-TileColor" content="#F7F7F7">
+    <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#F7F7F7">
+    <meta name="description" content="Калькулятор дат">
+    <!--Добавление кнопок полелиться-->
+    <script src="https://yastatic.net/share2/share.js"></script>
 </head>
 
 <body>
-<!--Стартовая страница-->	
-<div data-role="page" id="start_page">
-	<div data-role="header" data-position="fixed">
-		<h6>Калькулятор дат</h6>
-	</div>
-	<img src="sud.png" width="90%" style="margin-left: 5%; margin-top: 20%">
-	<div class="ui-footer-fixed" data-role="footer">
-	  <h6>Программа создана @Frolov Aleksey</h6>
-  </div>
-</div>	
-<!--Базовая страница-->    
-<div data-role="page" id="basic_calculation">
-  <!--Панель базовой страницы-->
-  <div data-role="panel" data-position-fixed="true" id="menu_basic">
-    <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
-        <li>МЕНЮ</li>
-        <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#date_difference">Разность дат</a></li>
-        <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#add_to_date">Добавить к дате</a></li>
-        <li><a data-mini="true" data-icon="info" data-iconpos="right" data-theme="a" href="#info">Информация</a></li>
-    </ul>
-  </div>
-  
-  <div data-role="header" data-position="fixed">
-	<a href="#menu_basic" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть меню</a>
-    <h6>Основной рассчет</h6>
-  </div>
-  
-  <div data-role="content">
-    <div data-role="fieldcontain">
-            <label for="datearest">Дата задержания:</label>
-			<div>
-				<input type="date" name="datearest" id="datearest" value="" size="10" data-mini="true" data-theme="a" data-track-theme="b" class="gorisont get_memory"/>
-				<!--<a href="#" data-role="button" data-icon="minus" data-iconpos="notext" data-theme="a" data-track-theme="b" class="gorisont">Из памяти</a>-->
-			</div>
-        <label for="coefficient">День за:</label>
-        <input type="number" name="coefficient" id="coefficient" value="1.5" step=".5" data-mini="true" data-theme="a" data-track-theme="b" maxlength="3" readonly/>
-		<div data-role="popup" for="coefficient" data-theme="a" data-dismissible="false" style="max-width:300px">
-			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Закрыть</a>
-			<h3 class="centr">Выбор значения:</h3>
-			<ul data-role="listview" data-inset="true" style="min-width:280px; data-theme="a">
-				<li for="coefficient" data-theme="a" class="get_coeff">1</li>
-				<li for="coefficient" data-theme="a" class="get_coeff">1.5</li>
-				<li for="coefficient" data-theme="a" class="get_coeff">2</li>
-			</ul>
-		</div>
-		<h4>Приговор:</h4>
-        <fieldset class="ui-grid-a">
-            <div class="ui-block-a">
-	            <label for="year_prigovor" style="gorisont">Лет:</label>
-	            <input type="number" name="year_prigovor" id="year_prigovor" min="0" max="25" maxlength="1" data-mini="true" data-highliht="true" style="gorisont" data-theme="a" data-track-theme="b"/>
-	        </div>
-	        <div class="ui-block-b">
-	            <label for="month_prigovor">Месяцев:</label>
-	            <input type="number" name="month_prigovor" id="month_prigovor" min="0" max="11" maxlength="1" data-mini="true" data-highliht="true" style="gorisont" data-theme="a" data-track-theme="b">  
-            </div>
-        </fieldset>
-    </div>
-    <div data-role="fieldcontain">
-        <a href="#" id="basic_calcul" data-role="button" data-mini="true" data-theme="a" data-track-theme="b" class="centr">Рассчитать</a>		  
-    </div>  
-	<label for="resultat_basic" class="gorisont">Результат:</label>  
-	<h4 id="resultat_basic" class="gorisont" type="date"></h4>
-	<a href="#" data-role="button" data-icon="plus" data-iconpos="notext" data-mini="true" data-theme="a" data-track-theme="b" class="gorisont memory" for="resultat_basic">Добавить в память</a>
-  </div>
-  	
-  <div class="ui-footer-fixed" data-role="footer">
-	  <h6>Программа создана @Frolov Aleksey</h6>
-  </div>
-  
-  <div data-role="popup" id="basic_calculation_memory" data-theme="a" data-dismissible="false" style="max-width:300px">
-        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Закрыть</a>
-        <div class="data_memory"></div>
-  </div>
-</div>
-<!--Страница рассчета разности дат-->
-<div data-role="page" id="date_difference">
-    
-    <div data-role="panel" data-position-fixed="true" id="menu_difference">
-        <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
-            <li>МЕНЮ</li>
-            <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#basic_calculation">Основной рассчет</a></li>
-            <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#add_to_date">Добавить к дате</a></li>
-            <li><a data-mini="true" data-icon="info" data-iconpos="right" data-theme="a" href="#info">Информация</a></li>
-        </ul>
-    </div>
-    
-  <div data-role="header">
-	<a href="#menu_difference" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть меню</a>
-    <h6>Разность дат</h6>
-  </div>
-  <div data-role="content">
-      <div data-role="fieldcontain">
-  	    <label for="date1">Дата первая:</label>
-        <input type="date" name="date1" id="date1" value="" size="10" data-mini="true" data-theme="a" data-track-theme="b" class="get_memory"/>
-	    <label for="date2">Дата вторая:</label>
-        <input type="date" name="date2" id="date2" value="" size="10" data-mini="true" data-theme="a" data-track-theme="b" class="get_memory"/>  
-        <label for="coeff_difference">День за:</label>
-        <input type="number" name="coeff_difference" id="coeff_difference" value="1" step=".5" data-mini="true" data-theme="a" data-track-theme="b" maxlength="3" readonly/>
-		<div data-role="popup" for="coeff_difference" data-theme="a" data-dismissible="false" style="max-width:300px">
-			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Закрыть</a>
-			<h3 class="centr">Выбор значения:</h3>
-			<ul data-role="listview" data-inset="true" style="min-width:280px; data-theme="a">
-				<li for="coeff_difference" data-theme="a" class="get_coeff">1</li>
-				<li for="coeff_difference" data-theme="a" class="get_coeff">1.5</li>
-				<li for="coeff_difference" data-theme="a" class="get_coeff">2</li>
-			</ul>
-		</div>
-	  </div>
-      <div data-role="fieldcontain">
-        <a href="#" id="get_difference" data-role="button" data-mini="true" data-theme="a" data-track-theme="b" class="centr">Рассчитать</a>		  
-      </div>
-      <label for="difference" class="gorisont">Результат:</label>  
-	  <h4 id="difference" class="gorisont" type='number'></h4>
-	  <a href="#" data-role="button" data-icon="plus" data-iconpos="notext" data-mini="true" data-theme="a" data-track-theme="b" class="gorisont memory" for="difference">Добавить в память</a>
-  </div>
-  <div class="ui-footer-fixed" data-role="footer">
-	  <h6>Программа создана @Frolov Aleksey</h6>
-  </div>
-  <div data-role="popup" id="date_difference_memory" data-theme="a" data-dismissible="false" style="max-width:300px">
-        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Закрыть</a>
-        <div class="data_memory"></div>
-  </div>
-</div>	
-<!--Страница добавить к дате-->
-<div data-role="page" id="add_to_date">
-    
-    <div data-role="panel" data-position-fixed="true" id="menu_add_to_date">
-        <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
-            <li>МЕНЮ</li>
-            <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#basic_calculation">Основной рассчет</a></li>
-            <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#date_difference">Разность дат</a></li>
-            <li><a data-mini="true" data-icon="info" data-iconpos="right" data-theme="a" href="#info">Информация</a></li>
-        </ul>
-    </div>
-    
-    <div data-role="header">
-		<a href="#menu_add_to_date" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть меню</a>
-        <h6>Добавить к дате</h6>
-    </div>
-    <div data-role="content">
-        <div data-role="fieldcontain">
-            <label for="date_add">Дата:</label>
-            <input type="date" name="date_add" id="date_add" value="" size="10" data-mini="true" data-theme="a" data-track-theme="b" class="get_memory"/>
-            <label for="year_add">Лет:</label>
-            <input type="number" id="year_add" name="year_add" value="" data-mini="true" data-theme="a" data-track-theme="b" maxlength="2"/>
-            <label for="month_add">Месяцев:</label>
-            <input type="number" id="month_add" name="month_add" value="" data-mini="true" data-theme="a" data-track-theme="b" maxlength="2"/>
-            <label for="dey_add">Дней:</label>
-            <input type="number" id="dey_add" name="dey_add" value="" data-mini="true" data-theme="a" data-track-theme="b" maxlength="3" class="get_memory"/>
+    <!--Стартовая страница-->
+    <div data-role="page" id="start_page">
+        <div data-role="header" data-position="fixed">
+            <h6>Калькулятор дат</h6>
         </div>
-        <div data-role="fieldcontain">
-            <a href="#" id="get_date_add" data-role="button" data-mini="true" data-theme="a" data-track-theme="b" class="centr">Рассчитать</a>		  
+        <img src="sud.png" width="90%" style="margin-left: 5%; margin-top: 20%">
+        <div class="ui-footer-fixed" data-role="footer">
+            <h6>Программа создана @Frolov Aleksey</h6>
         </div>
-        <label for="resultat_date_add" class="gorisont">Результат:</label>  
-	    <h4 id="resultat_date_add" class="gorisont" type="date"></h4>
-	    <a href="#" data-role="button" data-icon="plus" data-iconpos="notext" data-mini="true" data-theme="a" data-track-theme="b" class="gorisont memory" for="resultat_date_add">Добавить в память</a>
     </div>
-    <div class="ui-footer-fixed" data-role="footer">
-	  <h6>Программа создана @Frolov Aleksey</h6>
-    </div>
-    <div data-role="popup" id="add_to_date_memory" data-theme="a" data-dismissible="false" style="max-width:300px">
-        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Закрыть</a>
-        <div class="data_memory"></div>
-    </div>
-    <div data-role="popup" data-theme="a" style="max-width:90px" class="of_number">
-        <ul data-role="listview" data-inset="true" style="min-width:80px" data-theme="a">
-        </ul>
-    </div>
-</div>
+    <!--Базовая страница-->
+    <div data-role="page" id="basic_calculation">
+        <!--Панель базовой страницы-->
+        <div data-role="panel" data-position-fixed="true" id="menu_basic">
+            <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
+                <li>МЕНЮ</li>
+                <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a"
+                        href="#date_difference">Разность дат</a></li>
+                <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a"
+                        href="#add_to_date">Добавить к дате</a></li>
+                <li><a data-mini="true" data-icon="info" data-iconpos="right" data-theme="a" href="#info">Информация</a>
+                </li>
+            </ul>
+        </div>
 
-<!--Страница информации-->
-<div data-role="page" id="info">
-    
-    <div data-role="panel" data-position-fixed="true" id="menu_info">
-        <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
-            <li>МЕНЮ</li>
-            <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#basic_calculation">Основной рассчет</a></li>
-            <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a" href="#date_difference">Разность дат</a></li>
-            <li><a data-mini="true" data-icon="info" data-iconpos="right" data-theme="a" href="#add_to_date">Добавить к дате</a></li>
-        </ul>
+        <div data-role="header" data-position="fixed">
+            <a href="#menu_basic" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть
+                меню</a>
+            <h6>Основной рассчет</h6>
+            <a href="#" id="share_open" data-role="button" data-iconpos="notext" class="me_icon_share">Поделиться</a>
+        </div>
+
+        <div data-role="content">
+            <div id="share" data-role="popup" data-theme="a" data-dismissible="false" style="max-width:350px">
+                <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext"
+                    class="ui-btn-right">Закрыть</a>
+                <br />
+                <h4>Поделитесь приложением</h4>
+                <div class="ya-share2"
+                    data-services="vkontakte,facebook,odnoklassniki,twitter,viber,whatsapp,skype,telegram"></div>
+                <h5 class="centr_text">Выберите мессенджер</h5>
+                <h5 class="centr_text">или социальную сеть</h5>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="datearest">Дата задержания:</label>
+                <div>
+                    <input type="date" name="datearest" id="datearest" value="" size="10" data-mini="true"
+                        data-theme="a" data-track-theme="b" class="gorisont get_memory" />
+                    <!--<a href="#" data-role="button" data-icon="minus" data-iconpos="notext" data-theme="a" data-track-theme="b" class="gorisont">Из памяти</a>-->
+                </div>
+                <label for="coefficient">День за:</label>
+                <input type="number" name="coefficient" id="coefficient" value="1.5" step=".5" data-mini="true"
+                    data-theme="a" data-track-theme="b" maxlength="3" readonly />
+                <div data-role="popup" for="coefficient" data-theme="a" data-dismissible="false"
+                    style="max-width:300px">
+                    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete"
+                        data-iconpos="notext" class="ui-btn-right">Закрыть</a>
+                    <h3 class="centr">Выбор значения:</h3>
+                    <ul data-role="listview" data-inset="true" style="min-width:280px; data-theme=" a">
+                        <li for="coefficient" data-theme="a" class="get_coeff">1</li>
+                        <li for="coefficient" data-theme="a" class="get_coeff">1.5</li>
+                        <li for="coefficient" data-theme="a" class="get_coeff">2</li>
+                    </ul>
+                </div>
+                <h4>Приговор:</h4>
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <label for="year_prigovor" style="gorisont">Лет:</label>
+                        <input type="number" name="year_prigovor" id="year_prigovor" min="0" max="25" maxlength="1"
+                            data-mini="true" data-highliht="true" style="gorisont" data-theme="a"
+                            data-track-theme="b" />
+                    </div>
+                    <div class="ui-block-b">
+                        <label for="month_prigovor">Месяцев:</label>
+                        <input type="number" name="month_prigovor" id="month_prigovor" min="0" max="11" maxlength="1"
+                            data-mini="true" data-highliht="true" style="gorisont" data-theme="a" data-track-theme="b">
+                    </div>
+                </fieldset>
+            </div>
+            <div data-role="fieldcontain">
+                <a href="#" id="basic_calcul" data-role="button" data-mini="true" data-theme="a" data-track-theme="b"
+                    class="centr">Рассчитать</a>
+            </div>
+            <label for="resultat_basic" class="gorisont">Результат:</label>
+            <h4 id="resultat_basic" class="gorisont" type="date"></h4>
+            <a href="#" data-role="button" data-icon="plus" data-iconpos="notext" data-mini="true" data-theme="a"
+                data-track-theme="b" class="gorisont memory" for="resultat_basic">Добавить в память</a>
+        </div>
+
+        <div class="ui-footer-fixed" data-role="footer">
+            <h6>Программа создана @Frolov Aleksey</h6>
+        </div>
+
+        <div data-role="popup" id="basic_calculation_memory" data-theme="a" data-dismissible="false"
+            style="max-width:300px">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext"
+                class="ui-btn-right">Закрыть</a>
+            <div class="data_memory"></div>
+        </div>
     </div>
-    
-    <div data-role="header" class="ui-footer-fixed">
-		<a href="#menu_info" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть меню</a>
-        <h6>Информация</h6>
+    <!--Страница рассчета разности дат-->
+    <div data-role="page" id="date_difference">
+
+        <div data-role="panel" data-position-fixed="true" id="menu_difference">
+            <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
+                <li>МЕНЮ</li>
+                <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a"
+                        href="#basic_calculation">Основной рассчет</a></li>
+                <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a"
+                        href="#add_to_date">Добавить к дате</a></li>
+                <li><a data-mini="true" data-icon="info" data-iconpos="right" data-theme="a" href="#info">Информация</a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="header">
+            <a href="#menu_difference" data-role="button" data-icon="bars" data-iconpos="notext"
+                class="open_menu">Открыть меню</a>
+            <h6>Разность дат</h6>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="date1">Дата первая:</label>
+                <input type="date" name="date1" id="date1" value="" size="10" data-mini="true" data-theme="a"
+                    data-track-theme="b" class="get_memory" />
+                <label for="date2">Дата вторая:</label>
+                <input type="date" name="date2" id="date2" value="" size="10" data-mini="true" data-theme="a"
+                    data-track-theme="b" class="get_memory" />
+                <label for="coeff_difference">День за:</label>
+                <input type="number" name="coeff_difference" id="coeff_difference" value="1" step=".5" data-mini="true"
+                    data-theme="a" data-track-theme="b" maxlength="3" readonly />
+                <div data-role="popup" for="coeff_difference" data-theme="a" data-dismissible="false"
+                    style="max-width:300px">
+                    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete"
+                        data-iconpos="notext" class="ui-btn-right">Закрыть</a>
+                    <h3 class="centr">Выбор значения:</h3>
+                    <ul data-role="listview" data-inset="true" style="min-width:280px; data-theme=" a">
+                        <li for="coeff_difference" data-theme="a" class="get_coeff">1</li>
+                        <li for="coeff_difference" data-theme="a" class="get_coeff">1.5</li>
+                        <li for="coeff_difference" data-theme="a" class="get_coeff">2</li>
+                    </ul>
+                </div>
+            </div>
+            <div data-role="fieldcontain">
+                <a href="#" id="get_difference" data-role="button" data-mini="true" data-theme="a" data-track-theme="b"
+                    class="centr">Рассчитать</a>
+            </div>
+            <label for="difference" class="gorisont">Результат:</label>
+            <h4 id="difference" class="gorisont" type='number'></h4>
+            <a href="#" data-role="button" data-icon="plus" data-iconpos="notext" data-mini="true" data-theme="a"
+                data-track-theme="b" class="gorisont memory" for="difference">Добавить в память</a>
+        </div>
+        <div class="ui-footer-fixed" data-role="footer">
+            <h6>Программа создана @Frolov Aleksey</h6>
+        </div>
+        <div data-role="popup" id="date_difference_memory" data-theme="a" data-dismissible="false"
+            style="max-width:300px">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext"
+                class="ui-btn-right">Закрыть</a>
+            <div class="data_memory"></div>
+        </div>
     </div>
-    <div data-role="content" class="scroll">
-        <h4>Информация о приложении</h4>
-		<h4>V: 1.2.2</h4>
-        <p>Данное приложение создано по заказу судьи "Кузьминского суда" (секрет какого).</p>
-        <p>Приложение предназначено для выполнения рассчетов с датами.</p>
-        <h3>Функционал</h3>
-        <div data-role="collapsible-set" data-theme="a" data-content-theme="b" data-mini="true">
-            <div data-role="collapsible">
-                <h3>Основной рассчет</h3>
-                <p>Введите дату задержания. Укажите коэффициент "День за" (по умолчанию 1,5). Укажите срок "Приговора" в годах и месяцах. 
-                После чего нажмите кнопку "Рассчитать". Ниже Вы получите результат: ДАТА когда осужденный должен выйти.
-                </p>
+    <!--Страница добавить к дате-->
+    <div data-role="page" id="add_to_date">
+
+        <div data-role="panel" data-position-fixed="true" id="menu_add_to_date">
+            <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
+                <li>МЕНЮ</li>
+                <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a"
+                        href="#basic_calculation">Основной рассчет</a></li>
+                <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a"
+                        href="#date_difference">Разность дат</a></li>
+                <li><a data-mini="true" data-icon="info" data-iconpos="right" data-theme="a" href="#info">Информация</a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="header">
+            <a href="#menu_add_to_date" data-role="button" data-icon="bars" data-iconpos="notext"
+                class="open_menu">Открыть меню</a>
+            <h6>Добавить к дате</h6>
+        </div>
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="date_add">Дата:</label>
+                <input type="date" name="date_add" id="date_add" value="" size="10" data-mini="true" data-theme="a"
+                    data-track-theme="b" class="get_memory" />
+                <label for="year_add">Лет:</label>
+                <input type="number" id="year_add" name="year_add" value="" data-mini="true" data-theme="a"
+                    data-track-theme="b" maxlength="2" />
+                <label for="month_add">Месяцев:</label>
+                <input type="number" id="month_add" name="month_add" value="" data-mini="true" data-theme="a"
+                    data-track-theme="b" maxlength="2" />
+                <label for="dey_add">Дней:</label>
+                <input type="number" id="dey_add" name="dey_add" value="" data-mini="true" data-theme="a"
+                    data-track-theme="b" maxlength="3" class="get_memory" />
             </div>
-            <div data-role="collapsible">
-                <h3>Разность дат</h3>
-                <p>Введите первую и вторую даты. Нажмите кнопку "Рассчитать". Ниже Вы получите результат: количество дней между этими датами.</p>
+            <div data-role="fieldcontain">
+                <a href="#" id="get_date_add" data-role="button" data-mini="true" data-theme="a" data-track-theme="b"
+                    class="centr">Рассчитать</a>
             </div>
-            <div data-role="collapsible">
-                <h3>Добавить к дате</h3>
-                <p>Введите дату. Укажите сколько Вы хотите добавить "Лет", "Месяцев" и "Дней" (все данные не обязательны для заполнения).
-                Нажмите кнопку "Рассчитать". Ниже Вы получите результат: Дату отстоящую от исходной на выбранное количесиво лет, месяцев и дней.
-                <b>Примечание:</b>Данные "Лет", "Месяцев" и "Дней" можно вводить отрицательные значения, тогда результат получится: отнять от исходной даты.
-                </p>
+            <label for="resultat_date_add" class="gorisont">Результат:</label>
+            <h4 id="resultat_date_add" class="gorisont" type="date"></h4>
+            <a href="#" data-role="button" data-icon="plus" data-iconpos="notext" data-mini="true" data-theme="a"
+                data-track-theme="b" class="gorisont memory" for="resultat_date_add">Добавить в память</a>
+        </div>
+        <div class="ui-footer-fixed" data-role="footer">
+            <h6>Программа создана @Frolov Aleksey</h6>
+        </div>
+        <div data-role="popup" id="add_to_date_memory" data-theme="a" data-dismissible="false" style="max-width:300px">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext"
+                class="ui-btn-right">Закрыть</a>
+            <div class="data_memory"></div>
+        </div>
+        <div data-role="popup" data-theme="a" style="max-width:90px" class="of_number">
+            <ul data-role="listview" data-inset="true" style="min-width:80px" data-theme="a">
+            </ul>
+        </div>
+    </div>
+
+    <!--Страница информации-->
+    <div data-role="page" id="info">
+
+        <div data-role="panel" data-position-fixed="true" id="menu_info">
+            <ul data-role="listview" data-inset="true" data-mini="true" data-theme="a">
+                <li>МЕНЮ</li>
+                <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a"
+                        href="#basic_calculation">Основной рассчет</a></li>
+                <li><a data-mini="true" data-icon="arrow-r" data-iconpos="right" data-theme="a"
+                        href="#date_difference">Разность дат</a></li>
+                <li><a data-mini="true" data-icon="info" data-iconpos="right" data-theme="a"
+                        href="#add_to_date">Добавить к дате</a></li>
+            </ul>
+        </div>
+
+        <div data-role="header" class="ui-footer-fixed">
+            <a href="#menu_info" data-role="button" data-icon="bars" data-iconpos="notext" class="open_menu">Открыть
+                меню</a>
+            <h6>Информация</h6>
+        </div>
+        <div data-role="content" class="scroll">
+            <h4>Информация о приложении</h4>
+            <h4>V: 1.2.3</h4>
+            <p>Данное приложение создано по заказу судьи "Кузьминского суда" (секрет какого).</p>
+            <p>Приложение предназначено для выполнения рассчетов с датами.</p>
+            <h3>Функционал</h3>
+            <div data-role="collapsible-set" data-theme="a" data-content-theme="b" data-mini="true">
+                <div data-role="collapsible">
+                    <h3>Основной рассчет</h3>
+                    <p>Введите дату задержания. Укажите коэффициент "День за" (по умолчанию 1,5). Укажите срок
+                        "Приговора" в годах и месяцах.
+                        После чего нажмите кнопку "Рассчитать". Ниже Вы получите результат: ДАТА когда осужденный должен
+                        выйти.
+                    </p>
+                    <p>Добавлен функционал "Поделиться".</p>
+                    <div data-role="collapsible">
+                        <h3>Разность дат</h3>
+                        <p>Введите первую и вторую даты. Нажмите кнопку "Рассчитать". Ниже Вы получите результат:
+                            количество дней между этими датами.</p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Добавить к дате</h3>
+                        <p>Введите дату. Укажите сколько Вы хотите добавить "Лет", "Месяцев" и "Дней" (все данные не
+                            обязательны для заполнения).
+                            Нажмите кнопку "Рассчитать". Ниже Вы получите результат: Дату отстоящую от исходной на
+                            выбранное количесиво лет, месяцев и дней.
+                            <b>Примечание:</b>Данные "Лет", "Месяцев" и "Дней" можно вводить отрицательные значения,
+                            тогда результат получится: отнять от исходной даты.
+                        </p>
+                    </div>
+                    <div data-role="collapsible">
+                        <h3>Работа с памятью</h3>
+                        <p>Для добавления результата вычисления в Память, нажмите на кнопочку "+" рядом с результатом
+                            расчета.</p>
+                        <p>Чтобы извлечь, ранее записанное значение из Памяти, сделайте "долгое" нажание на поле, куда
+                            Вы хотите вставить значение из Памяти.
+                            После открытия меню "Памяти", нажмине на нужное значение и оно отобразится в поле ввода.</p>
+                        <p>В Память могут добавляться значения типа ЧИСЛО и типа ДАТА. При выборе значения из памяти
+                            программа покажет значения только того типа,
+                            который может быть вставлен в выбранное Вами поле ввода.</p>
+                        <p><b>ВНИМАНИЕ! </b>Данные в памяти не сохраняются между сеансами использования программы</p>
+                    </div>
+                </div>
+                <p>Вопросы и предложения отправлять на почту:
+                    <a href="mailto:fan-69@ya.ru" data-mini="true">fan-69@ya.ru</a></p>
             </div>
-            <div data-role="collapsible">
-                <h3>Работа с памятью</h3>
-                <p>Для добавления результата вычисления в Память, нажмите на кнопочку "+" рядом с результатом расчета.</p>
-                <p>Чтобы извлечь, ранее записанное значение из Памяти, сделайте "долгое" нажание на поле, куда Вы хотите вставить значение из Памяти.
-                После открытия меню "Памяти", нажмине на нужное значение и оно отобразится в поле ввода.</p>
-                <p>В Память могут добавляться значения типа ЧИСЛО и типа ДАТА. При выборе значения из памяти программа покажет значения только того типа, 
-                который может быть вставлен в выбранное Вами поле ввода.</p>
-                <p><b>ВНИМАНИЕ! </b>Данные в памяти не сохраняются между сеансами использования программы</p>
+            <div class="ui-footer-fixed" data-role="footer">
+                <h6>Программа создана @Frolov Aleksey</h6>
             </div>
         </div>
-        <p>Вопросы и предложения отправлять на почту: 
-        <a href="mailto:fan-69@ya.ru" data-mini="true">fan-69@ya.ru</a></p>
-    </div>
-    <div class="ui-footer-fixed" data-role="footer">
-	  <h6>Программа создана @Frolov Aleksey</h6>
-    </div>
-</div>
-    	
-<script>
-	$('a').buttonMarkup({ inline: true }); // кнопка размером с текст кнопки
-	
-	// функционал открытия боковой панели жестом
-	$("div[data-role='page']").on("swiperight",function(event,ui){
-	    $('#'+event.currentTarget.id+' [data-role="panel"]').panel('open');
-    });
-	
-	// проверка и ограничения полей для ввода чисел
-	$('input[type="number"]').on('keypress',function(event){
-	    if(event.target.value.length > event.target.maxLength){
-	        event.target.value = event.target.value.substring(0, event.target.maxLength);
-        };
-    });
-	
-	// нажатие кнопки основной рассчет
-	$('#basic_calcul').bind( "click", function(event, ui) {
-	    var d=basic_calculation($('#datearest').val(),$('#coefficient').val());
-  		document.querySelector('#resultat_basic').innerText=d.toLocaleString('ru',{year: 'numeric',month: 'long',day: 'numeric'});
-  		$('#resultat_basic').prop('value',d.toJSON().substr(0,10));
-	});
-    
-    // нажатие кнопки разность дат
-    $('#get_difference').bind('click',function(event,ui){
-        var n=difference_date(str_tu_date($('#date1').val()),str_tu_date($('#date2').val()),$('#coeff_difference').val());
-        $('#difference').html(n);
-        $('#difference').prop('value',n);
-    });
-    
-    // нажатие кнопки добавить к дате
-    $('#get_date_add').bind('click',function(event,ui){
-        var d=str_tu_date($('#date_add').val());
-        d=add_tu_date(d,+$('#year_add').val(),+$('#month_add').val(),+$('#dey_add').val());
-        $('#resultat_date_add').html(d.toLocaleString('ru',{year: 'numeric',month: 'long',day: 'numeric'}));
-        $('#resultat_date_add').prop('value',d.toJSON().substr(0,10));
-    });
-    
-    // событие перехода на страницу ИНФО
-    $('#info').on("pageshow",function(event){
-        var h=$('#info').height()-$('#info [data-role="header"]').height()*2;
-        $('.scroll').css({'overflow':'scroll','height':String(h)});
-    });
-    
-    // события нажатия кнопок добавления в память
-    $('.memory').on('click',function(event){
-        var dat=$('#'+$(this).attr('for')).val();
-        if(memory.indexOf(dat)==-1){
-            memory.push(dat);
-        }
-    });
-    
-    // событие долгое нажатие для вывода контекстного меню с данными памяти
-    $(".get_memory") .on ("taphold", function (event) {
-        var id=$(this).closest('[data-role="page"]').attr('id');
-        if(memory.length){
-            var dat='<h3 class="centr">Выбор значения:</h3><ul data-role="listview" data-inset="true" style="min-width:280px; data-theme="a">';
-            memory.forEach(function(item,i,memory){
-                if(($(event.target).attr('type')=='date' && typeof(item)=='string') || ($(event.target).attr('type')=='number' && typeof(item)=='number')){
-                    dat=dat+'<li for="'+event.target.id+'" class="set_memory" data-theme="a">'+item+'</li>'
+
+        <script>
+            $('a').buttonMarkup({ inline: true }); // кнопка размером с текст кнопки
+
+            // функционал открытия боковой панели жестом
+            $("div[data-role='page']").on("swiperight", function (event, ui) {
+                $('#' + event.currentTarget.id + ' [data-role="panel"]').panel('open');
+            });
+
+            // проверка и ограничения полей для ввода чисел
+            $('input[type="number"]').on('keypress', function (event) {
+                if (event.target.value.length > event.target.maxLength) {
+                    event.target.value = event.target.value.substring(0, event.target.maxLength);
+                };
+            });
+
+            // нажатие кнопки основной рассчет
+            $('#basic_calcul').bind("click", function (event, ui) {
+                var d = basic_calculation($('#datearest').val(), $('#coefficient').val());
+                document.querySelector('#resultat_basic').innerText = d.toLocaleString('ru', { year: 'numeric', month: 'long', day: 'numeric' });
+                $('#resultat_basic').prop('value', d.toJSON().substr(0, 10));
+            });
+
+            // нажатие кнопки разность дат
+            $('#get_difference').bind('click', function (event, ui) {
+                var n = difference_date(str_tu_date($('#date1').val()), str_tu_date($('#date2').val()), $('#coeff_difference').val());
+                $('#difference').html(n);
+                $('#difference').prop('value', n);
+            });
+
+            // нажатие кнопки добавить к дате
+            $('#get_date_add').bind('click', function (event, ui) {
+                var d = str_tu_date($('#date_add').val());
+                d = add_tu_date(d, +$('#year_add').val(), +$('#month_add').val(), +$('#dey_add').val());
+                $('#resultat_date_add').html(d.toLocaleString('ru', { year: 'numeric', month: 'long', day: 'numeric' }));
+                $('#resultat_date_add').prop('value', d.toJSON().substr(0, 10));
+            });
+
+            // событие перехода на страницу ИНФО
+            $('#info').on("pageshow", function (event) {
+                var h = $('#info').height() - $('#info [data-role="header"]').height() * 2;
+                $('.scroll').css({ 'overflow': 'scroll', 'height': String(h) });
+            });
+
+            // события нажатия кнопок добавления в память
+            $('.memory').on('click', function (event) {
+                var dat = $('#' + $(this).attr('for')).val();
+                if (memory.indexOf(dat) == -1) {
+                    memory.push(dat);
                 }
             });
-            dat=dat+'</ul>';
-            $('.data_memory').html(dat);
-            $('#'+id+'_memory').popup("open");
-            $('#'+id+'_memory').offset({top:$(this).offset().top+$(this).height()*2});
-	    $('#'+id+'_memory ul li').css({'height':'30px'});	
-        }
-    });
-    
-    // событие нажатия ссылок для получения данных из памяти
-    $(document).on('click','.set_memory',function(event){
-        $('#'+$(this).attr('for')).prop('value',$(this).text());
-        $(this).closest('[data-role="popup"]').popup('close');
-    });
-	
-	// событие начало выбора коеффициента расчета, открывает всплывающее окно выбра
-	$('[readonly]').bind('click',function(event,ui){
-		$('[data-role="popup"][for="'+event.currentTarget.id+'"]').popup('open');
-	});
-	
-	// событие окончания выбора коеффициента расчета, закрывает окно выбора
-	$('.get_coeff').bind('click',function(event,ui){
-		$('#'+$(this).attr('for')).prop('value',$(this).text());
-		$(this).closest('[data-role="popup"]').popup('close');
-	});
-	
-	// событие перехода на стартовую страницу
-	$('#start_page').on('pageshow',function(event){
-		setTimeout(function(){
-			document.location.href='#basic_calculation';
-		},1000);
-	});
-</script>	
+
+            // событие долгое нажатие для вывода контекстного меню с данными памяти
+            $(".get_memory").on("taphold", function (event) {
+                var id = $(this).closest('[data-role="page"]').attr('id');
+                if (memory.length) {
+                    var dat = '<h3 class="centr">Выбор значения:</h3><ul data-role="listview" data-inset="true" style="min-width:280px; data-theme="a">';
+                    memory.forEach(function (item, i, memory) {
+                        if (($(event.target).attr('type') == 'date' && typeof (item) == 'string') || ($(event.target).attr('type') == 'number' && typeof (item) == 'number')) {
+                            dat = dat + '<li for="' + event.target.id + '" class="set_memory" data-theme="a">' + item + '</li>'
+                        }
+                    });
+                    dat = dat + '</ul>';
+                    $('.data_memory').html(dat);
+                    $('#' + id + '_memory').popup("open");
+                    $('#' + id + '_memory').offset({ top: $(this).offset().top + $(this).height() * 2 });
+                    $('#' + id + '_memory ul li').css({ 'height': '30px' });
+                }
+            });
+
+            // событие нажатия ссылок для получения данных из памяти
+            $(document).on('click', '.set_memory', function (event) {
+                $('#' + $(this).attr('for')).prop('value', $(this).text());
+                $(this).closest('[data-role="popup"]').popup('close');
+            });
+
+            // событие начало выбора коеффициента расчета, открывает всплывающее окно выбра
+            $('[readonly]').bind('click', function (event, ui) {
+                $('[data-role="popup"][for="' + event.currentTarget.id + '"]').popup('open');
+            });
+
+            // событие окончания выбора коеффициента расчета, закрывает окно выбора
+            $('.get_coeff').bind('click', function (event, ui) {
+                $('#' + $(this).attr('for')).prop('value', $(this).text());
+                $(this).closest('[data-role="popup"]').popup('close');
+            });
+
+            // событие перехода на стартовую страницу
+            $('#start_page').on('pageshow', function (event) {
+                setTimeout(function () {
+                    document.location.href = '#basic_calculation';
+                }, 1000);
+            });
+
+            // открытие всплывающего окна "Поделиться"
+            $('#share_open').on('click', function (event) {
+                $('#share').popup('open');
+            });
+        </script>
 </body>
+
 </html>
 <script>
     if (navigator.serviceWorker.controller) {
-  		console.log('[PWA Builder] active service worker found, no need to register')
-	} else {
-  		navigator.serviceWorker.register('sw.js', {
-    		scope: './'
-  	}).then(function(reg) {
-    	console.log('Service worker has been registered for scope:'+ reg.scope);
-  });
-}
+        console.log('[PWA Builder] active service worker found, no need to register')
+    } else {
+        navigator.serviceWorker.register('sw.js', {
+            scope: './'
+        }).then(function (reg) {
+            console.log('Service worker has been registered for scope:' + reg.scope);
+        });
+    }
 </script>

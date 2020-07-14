@@ -14,3 +14,9 @@
 .set_number{
     height: 30px;
 }
+.me_icon_share{
+    background-image: url("js/images/Share24.png");
+}
+.centr_text{
+    text-align: center;
+}
